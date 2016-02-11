@@ -6,9 +6,9 @@ public class Vertex<E>
 	private int timesVisited;			//Number of times "visited" by a program.  
 	
 	/**
-	*Creates a new Vertex with a given item
+	*Constructor, Creates a new Vertex with a given item
 	*
-	*@param i item of the new Vertex
+	*@param E i item of the new Vertex
 	*/
 	public Vertex(E i)
 	{
@@ -21,7 +21,7 @@ public class Vertex<E>
 	/**
 	*Sets item of the vertex
 	*
-	*@param val new item of the vertex
+	*@param E i val new item of the vertex
 	*/
 	public void setItem(E i)
 	{
@@ -29,10 +29,11 @@ public class Vertex<E>
 	}
 	
 	/**
-	*Creates a two way connection to another given vertex.  Both Vertices will point to each other, and each of those 
+	*Creates a two way connection to another given vertex.  
+	*Both Vertices will point to each other, and each of those 
 	*connections will have the same value
 	*
-	*@param vertex vertex being connected to this vertex
+	*@param Vertex<E> vertex vertex being connected to this vertex
 	*@param val value of new connection
 	*/
 	public void addConnection(Vertex<E> vertex, double  val)
@@ -43,7 +44,8 @@ public class Vertex<E>
 	}
 	
 	/**
-	*Creates a one way connection to a given pointer.  Used as a helper method for addConnection().
+	*Creates a one way connection to a given pointer.  
+	*Used as a helper method for addConnection().
 	*
 	*@param vertex vertex that this vertex will now point to
 	*@param val value of the new connection
@@ -59,7 +61,7 @@ public class Vertex<E>
 	*/
 	public void visit()
 	{
-		timesVisited ++;
+		timesVisited++;
 	}
 	
 	/**
