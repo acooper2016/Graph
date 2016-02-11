@@ -1,7 +1,8 @@
+import java.util.Vector;
 public class Vertex<E>
 {
 	private E item;						//Value of the vertex
-	private Vector<Vertex<E>> pointers; //Holds all Vertexes this vertex points to
+	private Vector<Vertex<E>> pointers; //Holds all Vertices this vertex points to
 	private Vector<Double> values;		//"Values" (distances, types etc.) of each connection. 
 	private int timesVisited;			//Number of times "visited" by a program.  
 	
@@ -102,5 +103,16 @@ public class Vertex<E>
 	public Vector<Double> getValues()
 	{
 		return values;
+	}
+	
+	/**
+	* To String method for printing
+	*
+	*@return String the string representation of the Vertex
+	*/
+	public String toString()
+	{
+		String s = "{" + item + " - Pointers: " + pointers + "}";
+		return s;
 	}
 }
