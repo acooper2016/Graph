@@ -3,7 +3,7 @@ public class RunnerVertex
 {
 	public static void main(String[] args)
 	{
-		Vector<Vertex> vec = new Vector<Vertex>();
+		/*Vector<Vertex> vec = new Vector<Vertex>();
 		
 		String[] strArray = new String[]{"LA", "NYC", "BASKING RIDGE", "MORRISTOWN"};
 		for(String s : strArray)
@@ -22,6 +22,8 @@ public class RunnerVertex
 					v.addConnection(vOther, (double)Math.
 				}
 			}
-		} 
+		}*/
+		
+		TravellingSalesmanGraph g = new TravellingSalesmanGraph(5); 
 	}
 }
