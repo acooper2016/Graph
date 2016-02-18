@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class TravellingSalesmanGraph
 {
 	private Vector<Vertex<String>> towns;
@@ -5,7 +7,7 @@ public class TravellingSalesmanGraph
 	/**
 	*Constructs a TravellingSalesmanGraph with a certain number of towns, each with a randomly decided distance from each other.
 	*
-	*@param n number of towns
+	*@param int n number of towns
 	*/
 	public TravellingSalesmanGraph(int n)
 	{
@@ -24,21 +26,25 @@ public class TravellingSalesmanGraph
 		}
 	}
 	
+	
 	/**
-	*Returns a string representation of the Current Graph.  Lists each vertex in the graph, along with each of the graph's pointers.
+	*Returns a string representation of the Current Graph.  
+	*Lists each vertex in the graph, along with each of the graph's pointers.
 	*
 	*@return String representation of the graph
 	*/
 	public String toString()
 	{
-		String s = "";
+		String map = "";
 		for(int i = 0; i < towns.size(); i++)
 		{
-			s += towns.get(i).toString();
-			s += ",";
-			s += "\n";
+			Vertex t = towns.get(i);
+			String town = t.getItem().toString();
+			map += town;
+			map += ",";
+			map += "\n";
 		}
-		return s;
+		return map;
 	}
 	
 }
