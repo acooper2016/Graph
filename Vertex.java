@@ -115,4 +115,14 @@ public class Vertex<E>
 		String s = "{" + item + " - Pointers: " + pointers + "}";
 		return s;
 	}
+
+	public boolean hasUnvisitedPointers()
+	{
+		for(int i = 0; i < pointers.size(); i++)
+		{
+			if(pointers.get(i).getTimesVisited() == 0)
+				return true;
+		}
+		return false;
+	}	
 }
