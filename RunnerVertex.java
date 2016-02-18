@@ -25,5 +25,6 @@ public class RunnerVertex
 		}*/
 		
 		TravellingSalesmanGraph g = new TravellingSalesmanGraph(5); 
+		System.out.println(g);
 	}
 }

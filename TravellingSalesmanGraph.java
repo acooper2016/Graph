@@ -9,18 +9,17 @@ public class TravellingSalesmanGraph
 	*/
 	public TravellingSalesmanGraph(int n)
 	{
+		towns = new Vector<Vertex<String>>();
+
 		for(int i = 0; i < n; i++)
 		{
 			Vertex vert = new Vertex<String>(Integer.toString(i + 1));
-			
-			towns = new Vector<Vertex<String>>();
-			
+						
 			towns.add(vert);
 			
 			for(int j = 0; j < i; j++) //Adds from the new vertex to every existing vertex 
 			{	
 				vert.addConnection(towns.get(j), Math.random() * 100.0);
-				System.out.print(j);
 			}
 		}
 	}
