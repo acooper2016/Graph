@@ -36,13 +36,14 @@ public class TravellingSalesmanGraph
 	public String travel(int n)
 	{
 		String order = "";
-		for(Vertex currVert = towns.get(n); currVert.hasUnvisitedPointers();) //This loop will run for each town visited.  Contains entire algorithm required to find and visit the next town
+		Vertex currVert = towns.get(n);
+		while( currVert.hasUnvisitedPointers()) //This loop will run for each town visited.  Contains entire algorithm required to find and visit the next town
 		{
 			Vector<Integer> unvisitedPointers = new Vector<Integer>();
 			
 			currVert.visit();
 			
-			order += currVert.getItem();
+			order = order + currVert.getItem() + ",";
 			
 			for(int i = 0; i < currVert.getPointers().size(); i++) //Creates vector of indices of all of the current vertex's unvisited pointers
 			{
